@@ -1,0 +1,39 @@
+{
+  "name": "px-videomagic",
+  "productName": "PX-VideoMagic",
+  "version": "1.0.0",
+  "description": "VideoMagic Desktop Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.pixelschickeria.videomagic",
+    "win": {
+      "target": "nsis"
+    },
+    "publish": null,
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "extraResources": [
+      {
+        "from": "../web-ui/backend/dist/backend.exe",
+        "to": "backend.exe"
+      },
+      {
+        "from": "../video-use/remotion-subs",
+        "to": "video-use/remotion-subs",
+        "filter": ["**/*"]
+      }
+    ]
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}

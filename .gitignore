@@ -1,0 +1,47 @@
+# Node modules
+node_modules/
+desktop-app/node_modules/
+web-ui/frontend/node_modules/
+video-use/remotion-subs/node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+video-use/.venv/
+
+# Build and Dist
+dist/
+build/
+desktop-app/dist/
+desktop-app/build/
+web-ui/backend/dist/
+web-ui/backend/build/
+web-ui/frontend/dist/
+web-ui/frontend/build/
+desktop-app/release-builds/
+desktop-app/out/
+
+# App Data / Local State / Configs
+.env
+video-use/.env
+tmp/
+projects/
+edit/
+raw/
+.claude/
+.hyperframes-cache/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
