@@ -526,7 +526,10 @@ async def process_render_final(
             if keep_punctuation == "true":
                 render_cmd.append("--keep-punctuation")
             
-        subprocess.run(render_cmd, cwd=base_dir, check=True)
+        try:
+            subprocess.run(render_cmd, cwd=base_dir, capture_output=True, text=True, check=True)
+        except subprocess.CalledProcessError as cpe:
+            raise Exception(f"Render fehlgeschlagen: {cpe.stderr or cpe.stdout or str(cpe)}")
         
         # Update metadata to store final video path
         meta["final_video"] = out_video_name

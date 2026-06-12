@@ -157,6 +157,7 @@ export default function StyleSelector({
               style={{padding: '8px 12px', borderRadius: '4px', border: '1px solid #ccc', background: '#fff', fontSize: '14px', outline: 'none', cursor: 'pointer'}}
             >
               <option value="'GT America', Helvetica, Arial, sans-serif">GT America (Pixelschickeria)</option>
+              <option value="'Proxima Nova', sans-serif">Proxima Nova (Modern/Clean)</option>
               <option value="'Impact', sans-serif">Impact (Meme Style)</option>
               <option value="'Arial Black', sans-serif">Arial Black (Wuchtig)</option>
               <option value="'Roboto', sans-serif">Roboto (Modern)</option>
