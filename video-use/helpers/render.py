@@ -571,6 +571,18 @@ def build_remotion_subtitles(
     else:
         remotion_dir = Path(__file__).parent.parent / "remotion-subs"
         
+    if getattr(sys, 'frozen', False):
+        packed_modules = remotion_dir / "node_modules_packed"
+        node_modules = remotion_dir / "node_modules"
+        if packed_modules.exists():
+            if node_modules.exists():
+                import shutil
+                shutil.rmtree(node_modules, ignore_errors=True)
+            try:
+                packed_modules.rename(node_modules)
+            except Exception as e:
+                print(f"Warning: Could not rename node_modules_packed: {e}")
+                
     if not remotion_dir.exists():
         sys.exit(f"Remotion project not found in {remotion_dir}")
         
