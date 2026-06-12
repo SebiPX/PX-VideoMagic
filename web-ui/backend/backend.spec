@@ -5,7 +5,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('..\\..\\video-use\\helpers', 'video-use\\helpers'), ('..\\frontend\\dist', 'frontend_dist')],
+    datas=[('../../video-use/helpers', 'video-use/helpers'), ('../frontend/dist', 'frontend_dist')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
