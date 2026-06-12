@@ -138,14 +138,14 @@ function MainDashboard() {
   // Font and Style state (DMAX Style)
   const [selectedStyle, setSelectedStyle] = useState("tiktok_dynamic");
   const [highlightColor, setHighlightColor] = useState("#ff6400");
-  const [highlightShape, setHighlightShape] = useState("skew");
-  const [fontFamily, setFontFamily] = useState("'GT America', Helvetica, Arial, sans-serif");
+  const [highlightShape, setHighlightShape] = useState("rounded");
+  const [fontFamily, setFontFamily] = useState("'Proxima Nova', sans-serif");
   const [fontWeight, setFontWeight] = useState("bold");
   const [textCase, setTextCase] = useState("uppercase");
-  const [fontSize, setFontSize] = useState(20);
-  const [yPosition, setYPosition] = useState(15);
-  const [pillRadius, setPillRadius] = useState(20);
-  const [shapePadding, setShapePadding] = useState(10);
+  const [fontSize, setFontSize] = useState(10);
+  const [yPosition, setYPosition] = useState(10);
+  const [pillRadius, setPillRadius] = useState(10);
+  const [shapePadding, setShapePadding] = useState(5);
   const [popInAnimation, setPopInAnimation] = useState(true);
   const [keepPunctuation, setKeepPunctuation] = useState(false);
   const [subtitleLanguage, setSubtitleLanguage] = useState("Original");
